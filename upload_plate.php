@@ -16,7 +16,7 @@ if(isset($_FILES['plate_image']) && $_FILES['plate_image']['error'] === UPLOAD_E
     if(move_uploaded_file($tmpName, $targetFile)){
 
         // ---------- Plate Recognizer OCR ----------
-        $apiKey = "07f9335cc0e65f77dcfa8fe3dfd29855afe35077";  // <-- Replace with your API key
+        $apiKey = "";  // <-- Replace with your API key
         $apiUrl = "https://api.platerecognizer.com/v1/plate-reader/";
 
         $ch = curl_init();

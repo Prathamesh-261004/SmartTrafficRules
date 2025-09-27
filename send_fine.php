@@ -62,12 +62,12 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'psrane26@gmail.com';
-    $mail->Password   = 'yqwo ksns fvzk uicu'; // Use app password
+    $mail->Username   = '';
+    $mail->Password   = ''; // Use app password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('psrane26@gmail.com', 'Traffic Police');
+    $mail->setFrom('', 'Traffic Police');
     $mail->addAddress($vehicle['owner_email'], $vehicle['owner_name']);
     $mail->isHTML(true);
     $mail->Subject = "Traffic Violation Notice - Plate {$vehicle['plate_no']}";
